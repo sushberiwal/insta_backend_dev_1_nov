@@ -1,10 +1,12 @@
 const authRouter = require("express").Router();
 let passport = require("passport");
 let GoogleStrategy = require("passport-google-oauth2").Strategy;
-let { CLIENT_ID, CLIENT_PW } = require("../config/secrets");
+// let { CLIENT_ID, CLIENT_PW } = require("../config/secrets");
 let connection = require("../model/db");
 let {checkAuth, googleAuth, callbackAuth} = require("../controller/authController");
 
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_PW = process.env.CLIENT_PW;
 
 passport.serializeUser( function(user , done){
     console.log("inside serailize user !!");
