@@ -17,7 +17,7 @@ function googleAuth(req , res){
 }
 
 function callbackAuth(req , res){
-    res.redirect("http://localhost:3001/");
+    res.redirect("https://pepgram.netlify.app/");
 }
 
 module.exports.checkAuth = checkAuth;
