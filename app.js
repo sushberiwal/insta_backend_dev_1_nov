@@ -3,11 +3,12 @@ const userRouter = require("./router/userRouter");
 const postRouter = require("./router/postRouter");
 const requestRouter = require("./router/requestRouter");
 const authRouter = require("./router/authRouter");
+const cors = require('cors')
 let passport = require("passport");
 let cookie = require("cookie-session");
 const app = express();
 
-
+app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cookie({
