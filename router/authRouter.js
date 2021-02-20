@@ -28,7 +28,7 @@ passport.use(
       {
         clientID: CLIENT_ID,
         clientSecret: CLIENT_PW,
-        callbackURL: "https://instagram-pep.herokuapp.com/auth/callback",
+        callbackURL: "https://instagram-pep.herokuapp.com/api/auth/callback",
         passReqToCallback: true,
       },
       function (request, accessToken, refreshToken, profile, done) {

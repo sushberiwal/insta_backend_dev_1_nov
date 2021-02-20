@@ -20,7 +20,7 @@ app.use(passport.session());
 
 
 // for google auth
-app.use("/auth" , authRouter);
+app.use("/api/auth" , authRouter);
 
 //Users =>
 //get all users , get a user , create a user ,  update a user , delete a user 
