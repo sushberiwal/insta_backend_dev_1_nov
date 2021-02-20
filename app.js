@@ -15,6 +15,7 @@ app.use(express.static("public"));
 app.use(cookie({
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: ["askjdbajsbvfwfbha"],
+    httpOnly:false,
 }))
 
 app.use(passport.initialize());
