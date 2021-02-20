@@ -8,6 +8,7 @@ let passport = require("passport");
 let cookie = require("cookie-session");
 const app = express();
 
+app.use(require('cookie-parser')());
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
@@ -15,6 +16,7 @@ app.use(cookie({
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: ["askjdbajsbvfwfbha"],
 }))
+
 app.use(passport.initialize());
 app.use(passport.session());
 
