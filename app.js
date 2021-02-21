@@ -17,7 +17,6 @@ app.use(cookie({
     keys: ["askjdbajsbvfwfbha"],
     httpOnly:false,
     sameSite:"none",
-    secure:true
 }))
 
 app.use(passport.initialize());
